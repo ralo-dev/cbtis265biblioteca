@@ -62,6 +62,15 @@
                             </li>
                         </ul>
                     </li>
+                    <li>
+                        <div class="dropdown-menu-button"><i class="zmdi zmdi-calendar zmdi-hc-fw"></i>&nbsp;&nbsp; Reservaciones <i class="zmdi zmdi-chevron-down pull-right zmdi-hc-fw"></i></div>
+                        <ul class="list-unstyled">
+                            <li><a href="classroom.html"><i class="zmdi zmdi-calendar-check zmdi-hc-fw"></i>&nbsp;&nbsp; Hacer una reservación</a></li>
+                            <li>
+                                <a href="listclassroom.html"><i class="zmdi zmdi-bookmark zmdi-hc-fw"></i>&nbsp;&nbsp; Agenda</a>
+                            </li>
+                        </ul>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -75,8 +84,8 @@
                 <figure>
                    <img src="assets/img/user01.png" alt="user-picture" class="img-responsive img-circle center-box">
                 </figure>
-                <li style="color:#fff; cursor:default;">
-                    <span class="all-tittles">Nombre de administrador</span>
+                <li style="color:#fff; cursor:default;" id="getName">
+                    <script src="js/user_data.js"></script>
                 </li>
                 
                 <li  class="tooltips-general btn-help" data-placement="bottom" title="Perfil">
@@ -125,58 +134,62 @@
         <div class="container-fluid">
             <div class="container-flat-form">
                 <div class="title-flat-form title-flat-blue">Registrar un nuevo prestamo</div>
-                <form autocomplete="off">
                     <div class="row">
                        <div class="col-xs-12 col-sm-8 col-sm-offset-2">
                             <div class="group-material">
-                                <input type="text" class="material-control tooltips-general" placeholder="ISBN" required="" maxlength="70" pattern="[a-zA-ZáéíóúÁÉÍÓÚñÑ ]{1,70}" data-toggle="tooltip" data-placement="top" title="Escribe el ISBN del libro que se prestará">
-                                <span class="highlight"></span>
-                                <span class="bar"></span>
-                                <label>ISBN del libro a prestar</label>
-                            </div>
-                            <div class="group-material">
-                                <input type="text" class="material-control tooltips-general" placeholder="No Control" required="" maxlength="70" pattern="[a-zA-ZáéíóúÁÉÍÓÚñÑ ]{1,70}" data-toggle="tooltip" data-placement="top" title="Escribe el número de control del estudiante">
+                                <input id="input-Ncontrol" type="text" class="material-control tooltips-general" placeholder="No Control" required="" maxlength="70" pattern="[a-zA-ZáéíóúÁÉÍÓÚñÑ 1-9 ]{1,70}" data-toggle="tooltip" data-placement="top" title="Escribe el número de control del estudiante">
                                 <span class="highlight"></span>
                                 <span class="bar"></span>
                                 <label>Número de control del estudiante</label>
                             </div>
-                            <div class="group-material">
-                                <input type="text" class="material-control tooltips-general" placeholder="Nombre completo" required="" maxlength="100" pattern="[a-zA-ZáéíóúÁÉÍÓÚñÑ ]{1,70}" data-toggle="tooltip" data-placement="top" title="Escribe el nombre completo del estudiante">
+                            <div  class="group-material">
+                                <input id="input-nombreE" type="text" class="material-control tooltips-general" placeholder="Nombre completo" required="" maxlength="100" pattern="[a-zA-ZáéíóúÁÉÍÓÚñÑ ]{1,70}" data-toggle="tooltip" data-placement="top" title="Escribe el nombre completo del estudiante">
                                 <span class="highlight"></span>
                                 <span class="bar"></span>
                                 <label>Nombre del estudiante</label>
                             </div>
-                           <div class="group-material">
-                                <input type="text" class="material-control tooltips-general input-check-user" placeholder="Grado" required="" maxlength="20" pattern="[a-zA-Z0-9áéíóúÁÉÍÓÚñÑ]{1,20}" data-toggle="tooltip" data-placement="top" title="Escribe el grado del estudiante">
+                           <div  class="group-material">
+                                <input id="input-gradoE" type="text" class="material-control tooltips-general input-check-user" placeholder="Grado" required="" maxlength="20" pattern="[a-zA-Z0-9áéíóúÁÉÍÓÚñÑ]{1,20}" data-toggle="tooltip" data-placement="top" title="Escribe el grado del estudiante">
                                 <span class="highlight"></span>
                                 <span class="bar"></span>
                                 <label>Grado del estudiante</label>
                            </div>
                             <div class="group-material">
-                                <input type="text" class="material-control tooltips-general" placeholder="Grupo" required="" maxlength="3" data-toggle="tooltip" data-placement="top" title="Escribe el grupo al que pertenece el estudiante">
+                                <input id="input-grupoE" type="text" class="material-control tooltips-general" placeholder="Grupo" required="" maxlength="3" data-toggle="tooltip" data-placement="top" title="Escribe el grupo al que pertenece el estudiante">
                                 <span class="highlight"></span>
                                 <span class="bar"></span>
                                 <label>Grupo del estudiante</label>
                             </div>
                            <div class="group-material">
-                                <input type="text" class="material-control tooltips-general" placeholder="Contacto" required="" maxlength="100" data-toggle="tooltip" data-placement="top" title="Escribe algún dato de contacto del estudiante(numero telefonico, correo, etc.)">
+                                <input id="input-emailE" type="text" class="material-control tooltips-general" placeholder="E-mail" required="" maxlength="100" data-toggle="tooltip" data-placement="top" title="Escribe el correo electronico del estudiante">
                                 <span class="highlight"></span>
                                 <span class="bar"></span>
-                                <label>Ingrese un dato de contacto del estudiante</label>
+                                <label>E-mail estudiante</label>
                            </div>
                            <div class="group-material">
-                            <input type="date" class="material-control tooltips-general" placeholder="Fecha estimada" required="" maxlength="200" data-toggle="tooltip" data-placement="top" title="Escribe algún dato de contacto del estudiante(numero telefonico, correo, etc.)">
+                            <input id="input-telefonoE" type="text" class="material-control tooltips-general" placeholder="Telefono" required="" maxlength="100" data-toggle="tooltip" data-placement="top" title="Escribe un número telefonico">
+                            <span class="highlight"></span>
+                            <span class="bar"></span>
+                            <label>Telefono estudiante</label>
+                            </div>
+                            <div class="group-material">
+                                <input id="input-isbn" type="text" class="material-control tooltips-general" placeholder="ISBN" required="" maxlength="70" pattern="[0-9 -]{1,20}" data-toggle="tooltip" data-placement="top" title="Escribe el ISBN del libro que se prestará">
+                                <span class="highlight"></span>
+                                <span class="bar"></span>
+                                <label>ISBN del libro a prestar</label>
+                            </div>
+                           <div class="group-material">
+                            <input id="input-fechaEstimada" type="date" class="material-control tooltips-general" placeholder="Fecha estimada" required="" maxlength="200" data-toggle="tooltip" data-placement="top" title="Escribe algún dato de contacto del estudiante(numero telefonico, correo, etc.)">
                             <span class="highlight"></span>
                             <span class="bar"></span>
                             <label>Ingrese la fecha estimada de entrega</label>
                        </div>
                             <p class="text-center">
                                 <button type="reset" class="btn btn-info" style="margin-right: 20px;"><i class="zmdi zmdi-roller"></i> &nbsp;&nbsp; Limpiar</button>
-                                <button type="submit" class="btn btn-primary"><i class="zmdi zmdi-floppy"></i> &nbsp;&nbsp; Guardar</button>
+                                <button id="boton-registrar" type="submit" class="btn btn-primary"><i class="zmdi zmdi-floppy"></i> &nbsp;&nbsp; Guardar</button>
                             </p> 
                        </div>
                    </div>
-                </form>
             </div>
         </div>
         <footer class="footer full-reset">
@@ -196,5 +209,6 @@
             <div class="footer-copyright full-reset all-tittles">© DGETI 2023</div>
         </footer>
     </div>
+    <script src="js/prestamo_mod.js"></script>
 </body>
 </html>
