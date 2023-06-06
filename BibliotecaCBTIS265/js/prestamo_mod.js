@@ -33,6 +33,14 @@ input_nControl.addEventListener("keyup" ,function(){
             document.getElementById("input-telefonoE").value = estudiante.telefonoEstudiante
             encontrado = true
         }
+        else{
+          document.getElementById("input-nombreE").value = ""
+            document.getElementById("input-gradoE").value = ""
+            document.getElementById("input-grupoE").value = ""
+            document.getElementById("input-emailE").value = ""
+            document.getElementById("input-telefonoE").value = ""
+            encontrado = false
+        }
     });
 })
 

@@ -13,12 +13,14 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/jquery.mCustomScrollbar.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/jquery.dataTables.min.css">
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="js/jquery-1.11.2.min.js"><\/script>')</script>
     <script src="js/modernizr.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/jquery.dataTables.min.js"></script>
 </head>
 
 <body>
@@ -150,6 +152,24 @@
             </div>
         </div>
         <div class="container-fluid">
+            <h2 class="text-center all-tittles" style="clear: both; margin: 25px 0;">listado de administradores</h2>
+            <div class="tabla-paginada" id="tabla-paginada">
+                <table  id="tabla">
+                    <thead>
+                        <th>#</th>
+                        <th>Nombre</th>
+                        <th>Apellidos</th>
+                        <th>Nombre de usuario</th>
+                        <th>Rol</th>
+                    </thead>
+                    <tbody id="body-tabla">
+                        
+                    </tbody>
+                    
+                </table>
+            </div>
+        </div>
+        <!--div class="container-fluid">
             <h2 class="text-center all-tittles" style="clear: both; margin: 25px 0;">listado de encargados de biblioteca
             </h2>
             <div class="table-responsive">
@@ -161,10 +181,10 @@
                         <div class="div-table-cell">Nombre de usuario</div>
                         <div class="div-table-cell">Rol</div>
                     </div>
-                    <script src="js/personal_module.js"></script>
+                    
                 </div>
             </div>
-        </div>
+        </div-->
         <div class="modal fade" tabindex="-1" role="dialog" id="ModalHelp">
             <div class="modal-dialog modal-lg">
                 <div class="modal-content">
@@ -202,6 +222,7 @@
             <div class="footer-copyright full-reset all-tittles">© DGETI 2023</div>
         </footer>
     </div>
+    <script src="js/personal_module.js" defer></script>
 </body>
 
 </html>

@@ -116,7 +116,7 @@
         <div class="container-fluid"  style="margin: 50px 0;">
             <div class="row">
                 <div class="col-xs-12 col-sm-4 col-md-3">
-                    <img src="assets/img/user01.png" alt="user" class="img-responsive center-box" style="max-width: 110px;">
+                    <img src="assets/img/flat-book.png" alt="user" class="img-responsive center-box" style="max-width: 110px;">
                 </div>
                 <div class="col-xs-12 col-sm-8 col-md-8 text-justify lead">
                     Bienvenido a la agenda de reservación del aula. Aqui podrás ver todas las reservaciones que se han registrado hasta el momento.
@@ -135,7 +135,7 @@
                         <th>Fecha</th>
                         <th>Hora I.</th>
                         <th>Hora T.</th>
-                        <th>Eliminar</th>
+                        <th>Acciones</th>
                     </thead>
                     <tbody id="body-tabla">
                         
@@ -146,7 +146,7 @@
             </div>
         </div>
         <!--div class="container-fluid">
-            <h2 class="text-center all-tittles">Agenda</h2>
+            <h5 class="text-center all-tittles">Agenda</h5>
             <div id="tabla_agenda" class="div-table">
                 <div class="div-table-row div-table-head">
                     <div class="div-table-cell">Profesor</div>
@@ -159,6 +159,94 @@
                 </div>  
             </div>                  
         </div-->
+        <div class="modal" tabindex="-1" role="dialog" id="ModalEdit">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Actualizar datos</h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close" id="boton-cerrar">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="group-material">
+                            <h4 class="titulos-selects">Profesor</h4>
+                            <h5 id="text-profesor"></h5>
+                            <select class="selects-tiempo" id="select-profesor">
+                                <option >Fermin Antonio</option>
+                                <option >Maria Hernandez</option>
+                                <option >Julian Gutierrez</option>
+                                <option >Fepsalí Pérez</option>
+                                <option >Willebaldo Ugarte</option>
+                                <option >Monica Velasco</option>
+                                <option >Josefa Chavez</option>
+                                <option >Karolina Ferrera</option>
+                            </select>
+                        </div>
+                        <div class="group-material">
+                            <h4 class="titulos-selects">Fecha de reservación</h4>
+                            <h5 id="text-materia"></h5>
+                            <select class="selects-tiempo" id="select-materia">
+                                <option >Inglés</option>
+                                <option >Matematicas</option>
+                                <option >Lenguaje expresión oral y escrita</option>
+                                <option >Calculo Diferencial</option>
+                                <option >Calculo Integral</option>
+                                <option >Geometria analítica</option>
+                                <option >Lógica</option>
+                                <option >Tutorias</option>
+                                <option >Quimica</option>
+                            </select>
+                        </div>
+                        <div class="group-material">
+                            <h4 class="titulos-selects">Grado</h4>
+                            <h5 id="text-grado"></h5>
+                            <select class="selects-tiempo" id="select-grado">
+                                <option >1</option>
+                                <option >2</option>
+                                <option >3</option>
+                                <option >4</option>
+                                <option >5</option>
+                                <option >6</option>
+                            </select>
+                        </div>
+                        <div class="group-material">
+
+                            <h4 class="titulos-selects">Grupo</h4>
+                            <h5 id="text-grupo"></h5>
+                            <select class="selects-tiempo" id="select-grupo">
+                                <option >A</option>
+                                <option >B</option>
+                                <option >C</option>
+                                <option >D</option>
+                                <option >E</option>
+                                <option >F</option>
+                            </select>
+                        </div>
+                        <div class="group-material">
+                            <h4 class="titulos-selects">Fecha de reservación</h4>
+                            <h5 id="text-fecha"></h5>
+                            <select class="selects-tiempo" id="select-fecha">
+
+                            </select>
+                        </div>
+                        <div class="group-material">
+                            <h4 class="titulos-selects">Seleciona la hora a apartar</h4>
+                            <h5 id="text-hora"></h5>
+                            <select class="selects-tiempo" id="select-hora">
+
+                            </select>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary" id="boton-actualizar">Actualizar</button>
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal" id="boton-cancelar">Cancelar</button>
+                          </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <footer class="footer full-reset">
             <div class="container-fluid">
                 <div class="row">

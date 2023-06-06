@@ -12,12 +12,14 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/jquery.mCustomScrollbar.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/jquery.dataTables.min.css">
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="js/jquery-1.11.2.min.js"><\/script>')</script>
     <script src="js/modernizr.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/jquery.dataTables.min.js"></script>
 </head>
 <body>
     <div class="navbar-lateral full-reset">
@@ -130,6 +132,25 @@
             </div>
         </div>
         <div class="container-fluid">
+            <h2 class="text-center all-tittles" style="clear: both; margin: 25px 0;">listado de prestamos pendientes</h2>
+            <div class="tabla-paginada" id="tabla-libros">
+                <table  id="tabla">
+                    <thead>
+                        <th>ISBN</th>
+                        <th>Titulo</th>
+                        <th># Control</th>
+                        <th>Nombre estudiante</th>
+                        <th>Fecha Prestamo</th>
+                        <th>Fecha Entrega</th>
+                        <th>Devolver</th>
+                    </thead>
+                    <tbody id="body-tabla">
+                        
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <!--div class="container-fluid">
             <form class="pull-right" style="width: 30% !important;" autocomplete="off">
                 <div class="group-material">
                     <input type="search" style="display: inline-block !important; width: 70%;" class="material-control tooltips-general" placeholder="Buscar préstamo" required="" pattern="[a-zA-ZáéíóúÁÉÍÓÚ ]{1,50}" maxlength="50" data-toggle="tooltip" data-placement="top" title="Escribe alguna característica del préstamo">
@@ -153,7 +174,7 @@
                 </div>
             </div>
             
-        </div>
+        </div-->
         <div class="modal fade" tabindex="-1" role="dialog" id="ModalHelp">
           <div class="modal-dialog modal-lg">
             <div class="modal-content">
@@ -187,6 +208,6 @@
             <div class="footer-copyright full-reset all-tittles">© DGETI 2023</div>
         </footer>
     </div>
-    <script src="/cbtis265biblioteca/BibliotecaCBTIS265/js/loanpending_mod.js"></script>
+    <script src="/cbtis265biblioteca/BibliotecaCBTIS265/js/loanpending_mod.js" defer></script>
 </body>
 </html>

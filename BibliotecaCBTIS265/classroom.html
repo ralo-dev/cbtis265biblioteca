@@ -113,7 +113,7 @@
         <div class="container-fluid"  style="margin: 50px 0;">
             <div class="row">
                 <div class="col-xs-12 col-sm-4 col-md-3">
-                    <img src="assets/img/user01.png" alt="user" class="img-responsive center-box" style="max-width: 110px;">
+                    <img src="assets/img/flat-book.png" alt="user" class="img-responsive center-box" style="max-width: 110px;">
                 </div>
                 <div class="col-xs-12 col-sm-8 col-md-8 text-justify lead">
                     Bienvenido a la sección para reservar el aula para actividades, debes de llenar todos los campos del siguiente formulario para agendar una fecha y hora
@@ -127,22 +127,53 @@
                     <div class="row">
                        <div class="col-xs-12 col-sm-8 col-sm-offset-2">
                             <div class="group-material">
-                                <input id="input-profesor" type="text" class="material-control tooltips-general" placeholder="Nombre completo" required="" maxlength="70" pattern="[a-zA-ZáéíóúÁÉÍÓÚñÑ ]{1,70}" data-toggle="tooltip" data-placement="top" title="Escribe el nombre completo del profesor">
-                                <span class="highlight"></span>
-                                <span class="bar"></span>
-                                <label>Nombre del profesor</label>
+                                <h4 class="titulos-selects">Profesor</h4>
+                                <select class="selects-tiempo" id="select-profesor">
+                                    <option >Fermin Antonio</option>
+                                    <option >Maria Hernandez</option>
+                                    <option >Julian Gutierrez</option>
+                                    <option >Fepsalí Pérez</option>
+                                    <option >Willebaldo Ugarte</option>
+                                    <option >Monica Velasco</option>
+                                    <option >Josefa Chavez</option>
+                                    <option >Karolina Ferrera</option>
+                                </select>
                             </div>
                             <div class="group-material">
-                                <input id="input-clase" type="text" class="material-control tooltips-general" placeholder="Nombre de la clase" required="" maxlength="70" pattern="[a-zA-ZáéíóúÁÉÍÓÚñÑ ]{1,70}" data-toggle="tooltip" data-placement="top" title="Escribe la clase a impartir">
-                                <span class="highlight"></span>
-                                <span class="bar"></span>
-                                <label>Clase a impartir</label>
+                                <h4 class="titulos-selects">Fecha de reservación</h4>
+                                <select class="selects-tiempo" id="select-materia">
+                                    <option >Inglés</option>
+                                    <option >Matematicas</option>
+                                    <option >Lenguaje expresión oral y escrita</option>
+                                    <option >Calculo Diferencial</option>
+                                    <option >Calculo Integral</option>
+                                    <option >Geometria analítica</option>
+                                    <option >Lógica</option>
+                                    <option >Tutorias</option>
+                                    <option >Quimica</option>
+                                </select>
                             </div>
                             <div class="group-material">
-                                <input id="inputGradoGrupo" type="text" class="material-control tooltips-general" placeholder="Grado y grupo" required="" maxlength="4" data-toggle="tooltip" data-placement="top" title="Escribe el grado y el grupo que ingresará">
-                                <span class="highlight"></span>
-                                <span class="bar"></span>
-                                <label>Grado y grupo</label>
+                                <h4 class="titulos-selects">Grado</h4>
+                                <select class="selects-tiempo" id="select-grado">
+                                    <option >1</option>
+                                    <option >2</option>
+                                    <option >3</option>
+                                    <option >4</option>
+                                    <option >5</option>
+                                    <option >6</option>
+                                </select>
+                            </div>
+                            <div class="group-material">
+                                <h4 class="titulos-selects">Grupo</h4>
+                                <select class="selects-tiempo" id="select-grupo">
+                                    <option >A</option>
+                                    <option >B</option>
+                                    <option >C</option>
+                                    <option >D</option>
+                                    <option >E</option>
+                                    <option >F</option>
+                                </select>
                             </div>
                             <div class="group-material">
                                 <h4 class="titulos-selects">Fecha de reservación</h4>

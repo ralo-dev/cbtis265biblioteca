@@ -46,21 +46,16 @@ select_fecha.addEventListener('change', function(){
 })
 
 boton_registrar.addEventListener('click', ()=>{
-    if(document.getElementById("inputGradoGrupo").value == "" ||
-    document.getElementById("input-profesor").value == "" ||
-    document.getElementById("input-clase").value ==""
-    ){
-        window.alert("Hace falta rellenar algunos campos")
-    }else{
+    
         let horas = document.getElementById("select-hora").value
 
         const nuevaReservacion = {
-        nombreProfesor: document.getElementById("input-profesor").value,
+        nombreProfesor: document.getElementById("select-profesor").value,
 	    fechaReserva: document.getElementById("select-fecha").value,
 	    horaInicio: horas,
 	    horaFin: obtenerHoraSiguiente(horas),
-	    grupo: document.getElementById("inputGradoGrupo").value,
-	    materia: document.getElementById("input-clase").value
+	    grupo: document.getElementById("select-grado").value+' '+document.getElementById("select-grupo").value,
+	    materia: document.getElementById("select-materia").value
         }
     console.log(nuevaReservacion)
     fetch(API_URL_reservar, {
@@ -79,7 +74,7 @@ boton_registrar.addEventListener('click', ()=>{
             } else {
               console.log('Ocurrió un error durante la petición.');
               // Puedes manejar el error cuando la petición no se realiza correctamente
-              window.alert("hubo un inconveniente")
+              window.alert("Esa fecha y hora ya se encuentra ocupada")
             }
             return response.json();
           })
@@ -91,7 +86,7 @@ boton_registrar.addEventListener('click', ()=>{
           console.error('Error:', error);
           // Aquí puedes manejar errores en caso de que la solicitud falle
         });
-    }    
+        
 });
 function obtenerHoraSiguiente(hora) {
     var fecha = new Date('2000-01-01 ' + hora); 

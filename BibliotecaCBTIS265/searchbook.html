@@ -111,7 +111,6 @@
         <div class="container-fluid">
             <h2 class="text-center all-tittles" style="clear: both; margin: 25px 0;">listado de libros</h2>
             <div class="tabla-paginada" id="tabla-libros">
-                
                 <table  id="tabla">
                     <thead>
                         <th>ISBN</th>
@@ -121,15 +120,13 @@
                         <th>Edicion</th>
                         <th>Año P.</th>
                         <th>Existencia</th>
-                        <th>Editar</th>
-                        <th>Eliminar</th>
+                        <th>Acciones</th>
+                        
                     </thead>
                     <tbody id="body-tabla">
                         
                     </tbody>
-                    
                 </table>
-                
             </div>
         </div>
         <!--div class="container-fluid">
@@ -163,7 +160,7 @@
                 <div class="modal-content">
                     <div class="modal-header">
                         <h5 class="modal-title">Actualizar datos</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close" id="boton-cerrar">
                             <span aria-hidden="true">&times;</span>
                           </button>
                     </div>
@@ -221,7 +218,7 @@
                     <div class="modal-footer">
                         <div class="modal-footer">
                             <button type="button" class="btn btn-primary" id="boton-actualizar">Actualizar</button>
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal" id="boton-cancelar">Cancelar</button>
                           </div>
                     </div>
                 </div>

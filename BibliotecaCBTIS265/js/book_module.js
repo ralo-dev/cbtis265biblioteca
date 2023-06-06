@@ -86,26 +86,27 @@ fetch(url)
       libro_existencia.appendChild(
         document.createTextNode(`${libro.cantidad}`)
       );
-      let libro_botonActualizar = registro.appendChild(document.createElement("div"));
-      libro_botonActualizar.className = "div-table-cell";
-      libro_botonActualizar.style = "width: 10%;";*/
-      let libro_botonActualizar = fila.appendChild(document.createElement("td"))
+      let acciones = registro.appendChild(document.createElement("div"));
+      acciones.className = "div-table-cell";
+      acciones.style = "width: 10%;";*/
+      let acciones = fila.appendChild(document.createElement("td"))
       let boton = document.createElement("button");
       boton.className = "btn btn-success";
+      boton.title="Actualizar"
       let logo = document.createElement("i")
       logo.className = "zmdi zmdi-refresh"
       boton.appendChild(logo);
-      libro_botonActualizar.appendChild(boton);
+      acciones.appendChild(boton);
       boton.addEventListener('click', function(){
         //activamos el modal
-        $(document).ready(function(){
-        });
-        $('.btn-success').on('click', function(){
+        //$(document).ready(function(){
+        //});
+        //$('.btn-success').on('click', function(){
         $('#ModalEdit').modal({
             show: true,
             backdrop: "static"
         });
-        });
+        //});
         /*
         document.getElementById("#ModalEdit").modal({
           show:true,
@@ -147,13 +148,14 @@ fetch(url)
       });
       })
       
-      let libro_botonEliminar = fila.appendChild(document.createElement("td"))
+      //let libro_botonEliminar = fila.appendChild(document.createElement("td"))
       let botonE = document.createElement("button");
       botonE.className = "btn btn-danger";
+      botonE.title = "Eliminar"
       let logoE = document.createElement("i")
       logoE.className = "zmdi zmdi-delete"
       botonE.appendChild(logoE);
-      libro_botonEliminar.appendChild(botonE);
+      acciones.appendChild(botonE);
       botonE.addEventListener('click', function(){
         fetch(`https://biblioteca-cbtis265.herokuapp.com/api/libros/eliminar/${libro.isbn}`, {
           method: 'DELETE',
@@ -209,5 +211,10 @@ fetch(url)
       })
   });
   
-  
+document.getElementById("boton-cerrar").addEventListener('click',function(){
+  window.location.reload();
+})
+document.getElementById("boton-cancelar").addEventListener('click',function(){
+  window.location.reload();
+})
   
