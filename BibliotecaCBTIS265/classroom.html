@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <title>Inicio</title>
+    <title>Aula</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="Shortcut Icon" type="image/x-icon" href="assets/icons/book.ico" />
@@ -87,7 +87,6 @@
                 <li style="color:#fff; cursor:default;" id="getName">
                     <script src="js/user_data.js"></script>
                 </li>
-                
                 <li  class="tooltips-general btn-help" data-placement="bottom" title="Perfil">
                     <i class="zmdi zmdi-account"></i>
                 </li>
@@ -102,36 +101,101 @@
         </nav>
         <div class="container">
             <div class="page-header">
-              <h1 class="all-tittles">Sistema bibliotecario <small>Inicio</small></h1>
+              <h1 class="all-tittles">Sistema bibliotecario <small>Reservación del aula</small></h1>
             </div>
         </div>
-        <section class="full-reset text-center" style="padding: 40px 0;">
-            <article class="tile">
-                <div class="tile-icon full-reset"><i class="zmdi zmdi-face"></i></div>
-                <div class="tile-name all-tittles">administradores</div>
-                <div class="tile-num full-reset">7</div>
-            </article>
-            <article class="tile">
-                <div class="tile-icon full-reset"><i class="zmdi zmdi-accounts"></i></div>
-                <div class="tile-name all-tittles">estudiantes registrados</div>
-                <div class="tile-num full-reset">70</div>
-            </article>
-            <article class="tile">
-                <div class="tile-icon full-reset"><i class="zmdi zmdi-book"></i></div>
-                <div class="tile-name all-tittles">libros</div>
-                <div class="tile-num full-reset">77</div>
-            </article>
-            <article class="tile">
-                <div class="tile-icon full-reset"><i class="zmdi zmdi-time-restore"></i></div>
-                <div class="tile-name all-tittles" style="width: 90%;">devoluciones pendientes</div>
-                <div class="tile-num full-reset">9</div>
-            </article>
-            <article class="tile">
-                <div class="tile-icon full-reset"><i class="zmdi zmdi-calendar"></i></div>
-                <div class="tile-name all-tittles">préstamos</div>
-                <div class="tile-num full-reset">9</div>
-            </article>
-        </section>
+        <div class="container-fluid">
+            <ul class="nav nav-tabs nav-justified"  style="font-size: 17px;">
+                <li role="presentation"><a href="listclassroom.html">Agenda</a></li>
+                <li role="presentation" class="active"><a href="classroom.html">Asignar reservación</a></li>
+            </ul>
+        </div>
+        <div class="container-fluid"  style="margin: 50px 0;">
+            <div class="row">
+                <div class="col-xs-12 col-sm-4 col-md-3">
+                    <img src="assets/img/flat-book.png" alt="user" class="img-responsive center-box" style="max-width: 110px;">
+                </div>
+                <div class="col-xs-12 col-sm-8 col-md-8 text-justify lead">
+                    Bienvenido a la sección para reservar el aula para actividades, debes de llenar todos los campos del siguiente formulario para agendar una fecha y hora
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="container-flat-form">
+                <div class="title-flat-form title-flat-blue">Agendar reservación</div>
+                <form autocomplete="off">
+                    <div class="row">
+                       <div class="col-xs-12 col-sm-8 col-sm-offset-2">
+                            <div class="group-material">
+                                <h4 class="titulos-selects">Profesor</h4>
+                                <select class="selects-tiempo" id="select-profesor">
+                                    <option >Fermin Antonio</option>
+                                    <option >Maria Hernandez</option>
+                                    <option >Julian Gutierrez</option>
+                                    <option >Fepsalí Pérez</option>
+                                    <option >Willebaldo Ugarte</option>
+                                    <option >Monica Velasco</option>
+                                    <option >Josefa Chavez</option>
+                                    <option >Karolina Ferrera</option>
+                                </select>
+                            </div>
+                            <div class="group-material">
+                                <h4 class="titulos-selects">Fecha de reservación</h4>
+                                <select class="selects-tiempo" id="select-materia">
+                                    <option >Inglés</option>
+                                    <option >Matematicas</option>
+                                    <option >Lenguaje expresión oral y escrita</option>
+                                    <option >Calculo Diferencial</option>
+                                    <option >Calculo Integral</option>
+                                    <option >Geometria analítica</option>
+                                    <option >Lógica</option>
+                                    <option >Tutorias</option>
+                                    <option >Quimica</option>
+                                </select>
+                            </div>
+                            <div class="group-material">
+                                <h4 class="titulos-selects">Grado</h4>
+                                <select class="selects-tiempo" id="select-grado">
+                                    <option >1</option>
+                                    <option >2</option>
+                                    <option >3</option>
+                                    <option >4</option>
+                                    <option >5</option>
+                                    <option >6</option>
+                                </select>
+                            </div>
+                            <div class="group-material">
+                                <h4 class="titulos-selects">Grupo</h4>
+                                <select class="selects-tiempo" id="select-grupo">
+                                    <option >A</option>
+                                    <option >B</option>
+                                    <option >C</option>
+                                    <option >D</option>
+                                    <option >E</option>
+                                    <option >F</option>
+                                </select>
+                            </div>
+                            <div class="group-material">
+                                <h4 class="titulos-selects">Fecha de reservación</h4>
+                                <select class="selects-tiempo" id="select-fecha">
+
+                                </select>
+                            </div>
+                            <div class="group-material">
+                                <h4 class="titulos-selects">Seleciona la hora a apartar</h4>
+                                <select class="selects-tiempo" id="select-hora">
+
+                                </select>
+                            </div>
+                            <p class="text-center">
+                                <button type="reset" class="btn btn-info" style="margin-right: 20px;"><i class="zmdi zmdi-roller"></i> &nbsp;&nbsp; Limpiar</button>
+                                <button id="buton-save-register" type="button" class="btn btn-primary"><i class="zmdi zmdi-floppy"></i> &nbsp;&nbsp; Guardar</button>
+                            </p> 
+                       </div>
+                   </div>
+                </form>
+            </div>
+        </div>
         <footer class="footer full-reset">
             <div class="container-fluid">
                 <div class="row">
@@ -149,5 +213,6 @@
             <div class="footer-copyright full-reset all-tittles">© DGETI 2023</div>
         </footer>
     </div>
+    <script src="/cbtis265biblioteca/BibliotecaCBTIS265/js/classroom_mod.js"></script>
 </body>
 </html>
